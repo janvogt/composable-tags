@@ -1,0 +1,25 @@
+{
+  "name": "composable-tags",
+  "version": "1.0.0",
+  "description": "ES2015 template tags that compose",
+  "main": "index.js",
+  "repository": "https://github.com/janvogt/composable-tags",
+  "author": "Jan Vogt <janvogt@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "source-map-support": "^0.5.0"
+  },
+  "scripts": {
+    "build": "babel --out-dir dist --extensions '.mjs' src",
+    "test":
+      "$npm_execpath run build && node -r source-map-support/register dist/test.js",
+    "prepublish": "$npm_execpath run build"
+  },
+  "babel": {
+    "presets": ["env"],
+    "sourceMaps": "inline"
+  }
+}

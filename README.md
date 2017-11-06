@@ -2,6 +2,10 @@
 
 Small and dependency free library for ES2015 template string tags that compose well.
 
+```sh
+  npm install composable-tags
+```
+
 ## Usage
 
 Call the t function with any number of tags. They are applied from right to left.

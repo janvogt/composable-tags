@@ -10,7 +10,7 @@ Call the t function with any number of tags. They are applied from right to left
     import {t, stripIdent, id, render} from 'composable-tags'
 
     const name = 'you'
-    const result = t(render, stripIdent('\n'), id)`
+    const result = t(render, stripIdent({newLine: '\n'}), id)`
         Hallo ${name},
 
         I just wanted to tell you that
@@ -58,7 +58,7 @@ You want to leverage syntax highlighting for your, e.g. GraphQL, template string
 
     const gql = t(render) // equivalent to not use any tags.
     // if you want to strip indentaion as well just use
-    // const gql = t(render, stripcCommonInden()) instead
+    // const gql = t(render, stripCommonIndent()) instead
 
     const query = gql`
         query userWithSyntaxHighlighting($email: String!) {

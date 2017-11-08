@@ -111,3 +111,7 @@ const query = gql`
     }
 `
 ```
+
+## Contributions
+
+Your more than welcome to add your own helpful tags. After all what is a composable tag system worth if it doesn't contain the tags you want to compose?

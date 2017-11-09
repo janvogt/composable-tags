@@ -15,10 +15,10 @@ function t(TerminatingTag, ...Tags)
 Call the t function with one terminating tag and any number of composable tags. They are applied from right to left.
 
 ```js
-import {t, stripIdent, id, render} from 'composable-tags'
+import {t, stripCommonIndent, id, render} from 'composable-tags'
 
 const name = 'you';
-const tag = t(render, stripIdent({newLine: '\n'}), id);
+const tag = t(render, stripCommonIndent({newLine: '\n'}), id);
 console.log(tag`
     Hallo ${name},
 

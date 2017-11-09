@@ -111,4 +111,25 @@ I just wanted to tell you that
 1+1 = 2.
 Sincerely yours.`
   );
+
+  let name = "you";
+  let tag = t(render, stripCommonIndent({ newLine: "\n" }), id);
+  eq(
+    tag`
+      Hallo ${name},
+
+      I just wanted to tell you that
+      1+1 = ${1 + 1}.
+
+      Sincerely yours.
+      `,
+    `
+Hallo you,
+
+I just wanted to tell you that
+1+1 = 2.
+
+Sincerely yours.
+`
+  );
 });
